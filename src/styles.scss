@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container{
+  position: relative;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.title-box{
+  margin: 24px 0;
+
+  .title-box__titulo{
+    font-size: 2.5em;
+    text-align: center;
+  }
+}
+
+.options-box{
+  padding: 24px;
+  text-align: right;
+
+  .options-box__button{
+    font-size: 1.5em;
+  }
+}
+
+@media (max-with: 720px){
+  .container {
+    width: 100% !important;
+  }
+}
