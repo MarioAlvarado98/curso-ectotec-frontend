@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: "https://localhost:44378/api/"
+  apiUrl: "https://ectotec-curso-2020-back.azurewebsites.net/api/"
 };

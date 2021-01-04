@@ -17,6 +17,21 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     font-size: 2.5em;
     text-align: center;
   }
+
+  .title-box__index-title{
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 160px;
+
+    .netColor{
+      color: rgb(35, 110, 250);
+    }
+
+    .angularColor{
+      color: red;
+    }
+  }
 }
 
 .options-box{
@@ -25,6 +40,23 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
   .options-box__button{
     font-size: 1.5em;
+  }
+}
+
+.register-box{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.index-box{
+  margin-top: 80px;
+  padding: 32px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+
+  .notImportant{
+    color: rgb(165, 165, 165);
   }
 }
 

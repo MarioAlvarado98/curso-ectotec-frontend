@@ -14,24 +14,22 @@ export class PersonaService {
    }
 
   public getPersonas(): Observable<Persona[]>{
-    return this.http.get<Persona[]>(this.APIURL.concat('Personas'));
+    return this.http.get<Persona[]>(this.APIURL.concat('Persona'));
   }
 
   public getPersona(id: number): Observable<Persona>{
-    return this.http.get<Persona>(this.APIURL.concat('Personas/'+id));
+    return this.http.get<Persona>(this.APIURL.concat('Persona/' + id));
   }
 
   public postPersona(persona: Persona): Observable<boolean>{
-    return this.http.post<boolean>(this.APIURL.concat('Personas'),persona);
+    return this.http.post<boolean>(this.APIURL.concat('Persona'),persona);
   }
 
   public putPersona(persona: Persona): Observable<boolean>{
-    return this.http.put<boolean>(this.APIURL.concat('Personas'),persona);
+    return this.http.put<boolean>(this.APIURL.concat(`Persona/${persona.personaId}`),persona);
   }
 
   public deletePersona(id: number): Observable<boolean>{
-    let params = new HttpParams();
-    params = params.append('id', id.toString());
-    return this.http.delete<boolean>(this.APIURL.concat('Personas'),{params});
+    return this.http.delete<boolean>(this.APIURL.concat(`Persona/${id}`));
   }
 }

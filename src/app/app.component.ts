@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UsuarioService } from './_services/usuario.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Curso-Ectotec-FrontEnd';
+
+  constructor(
+    public usuarioService: UsuarioService,
+    ){
+    }
+
+  public logout(): void{
+    this.usuarioService.logout();
+  }
+
 }

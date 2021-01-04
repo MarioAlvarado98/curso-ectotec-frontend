@@ -4,10 +4,13 @@
     <mat-form-field class="full-width" appearance="fill">
       <mat-label>Nombre Completo</mat-label>
       <input matInput formControlName="NombreCompleto">
+      <mat-error *ngIf="personaForm.get('NombreCompleto').hasError('required')">Este campo es requerido</mat-error>
     </mat-form-field>
     <mat-form-field class="full-width" appearance="fill">
       <mat-label>Correo</mat-label>
-      <input matInput formControlName="Correo">
+      <input matInput formControlName="Correo" email>
+      <mat-error *ngIf="personaForm.get('Correo').hasError('required')">Este campo es requerido</mat-error>
+      <mat-error *ngIf="personaForm.get('Correo').hasError('email')">El correo no es válido.</mat-error>
     </mat-form-field>
   </mat-dialog-content>
   <div mat-dialog-actions>

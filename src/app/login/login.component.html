@@ -1,0 +1,24 @@
+<div class="title-box">
+  <h1 class="title-box__titulo">Inicio de sesión</h1>
+</div>
+<div class="register-box">
+  <form [formGroup]="loginForm" (ngSubmit)="submit()">
+    <mat-dialog-content>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Correo</mat-label>
+        <input matInput formControlName="email" email>
+        <mat-error *ngIf="loginForm.get('email').hasError('required')">Este campo es requerido</mat-error>
+        <mat-error *ngIf="loginForm.get('email').hasError('email')">El correo no es válido</mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password" formControlName="password">
+        <mat-error *ngIf="loginForm.get('password').hasError('required')">Este campo es requerido</mat-error>
+      </mat-form-field>
+    </mat-dialog-content>
+    <div mat-dialog-actions>
+      <button mat-raised-button color="primary" class="full-width" type="submit" cdkFocusInitial>Iniciar sesión</button>
+      <button routerLink="/Registro" mat-raised-button color="accept" class="full-width" cdkFocusInitial>Registrarse</button>
+    </div>
+  </form>
+</div>

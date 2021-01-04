@@ -5,8 +5,14 @@
     <button routerLink="/" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
       <mat-icon>home</mat-icon>
     </button>
-    <button routerLink="/Personas" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <button *ngIf="usuarioService.isAuthenticated" routerLink="/Personas" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
       <mat-icon>person</mat-icon>
+    </button>
+    <button *ngIf="!usuarioService.isAuthenticated" routerLink="/Login" mat-button>
+      Login
+    </button>
+    <button (click)="logout()" *ngIf="usuarioService.isAuthenticated" mat-button>
+      Logout
     </button>
   </mat-toolbar>
 </p>

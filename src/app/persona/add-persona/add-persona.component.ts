@@ -55,7 +55,7 @@ export class AddPersonaComponent implements OnInit {
     this.personaForm = this.formBuilder.group(
       {
         NombreCompleto: ['', [Validators.required]],
-        Correo: ['', [Validators.required]],
+        Correo: ['', [Validators.required, Validators.email]],
       }
     );
   }
